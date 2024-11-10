@@ -172,7 +172,8 @@ body {
 /* Tema Acara */
 
 .tema {
-  background-color: var(--navy);
+  /* background-color: var(--navy); */
+  background-image: url(img/bg.png);
   color: var(--bg);
 }
 
