@@ -117,6 +117,28 @@
                 seconds: { singular: 'detik', plural: 'detik' }
             },
         });
+
+      function playAudio() {
+            var audio = document.getElementById("background-music");
+            audio.loop = true; 
+
+            audio.play().then(() => {
+                console.log("Audio berhasil diputar saat halaman dimuat.");
+                removeFallbackListeners();
+            }).catch(function(error) {
+                console.log("Autoplay gagal: " + error);
+            });
+        }
+
+        function removeFallbackListeners() {
+            window.removeEventListener("scroll", playAudio);
+            window.removeEventListener("click", playAudio);
+        }
+
+        window.onload = playAudio;
+
+        window.addEventListener("scroll", playAudio);
+        window.addEventListener("click", playAudio);
     </script>
   </body>
 </html>
