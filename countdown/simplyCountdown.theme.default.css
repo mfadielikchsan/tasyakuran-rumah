@@ -1,29 +1,55 @@
-.simply-countdown{
-    overflow:hidden;
-    display:table;
-    font-family:'Arial',sans-serif;
+.simply-countdown {
+    overflow: hidden;
+    display: table;
+    font-family: 'Arial', sans-serif;
     margin: auto;
 }
-.simply-countdown>.simply-section{
-    width:30px;
-    height:30px;
-    padding:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    float:left;
-    margin:10px;
+
+.simply-countdown > .simply-section {
+    width: 30px;
+    height: 30px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 10px;
     color: var(--bg);
     background: var(--navy);
-    box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
     border-radius: 10%;
 }
-.simply-countdown>.simply-section .simply-amount,
-.simply-countdown>.simply-section .simply-word{
-    display:block;
-    text-align:center
+
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+    display: block;
+    text-align: center;
 }
 
-.simply-countdown>.simply-section .simply-amount {
+.simply-countdown > .simply-section .simply-amount {
     font-size: 1.6rem;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+    .simply-countdown {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .simply-countdown > .simply-section {
+        width: 30px; /* Increased width for readability on smaller screens */
+        height: 30px;
+        padding: 10px; /* Further reduced padding */
+        margin: 5px; /* Reduced margin to save space */
+    }
+
+    .simply-countdown > .simply-section .simply-amount {
+        font-size: 1.4rem; /* Slightly smaller font size */
+    }
+
+    .simply-countdown > .simply-section .simply-word {
+        font-size: 0.8rem; /* Adjust font size for better fit */
+    }
 }
