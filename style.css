@@ -173,7 +173,12 @@ body {
 
 .tema {
   /* background-color: var(--navy); */
-  background-image: url(img/bg.png);
+  background-image: url(img/bgf.png);
+  background-position: var(--bg);
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   color: var(--bg);
 }
 
